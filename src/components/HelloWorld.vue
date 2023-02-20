@@ -26,6 +26,9 @@ export default {
   props: {
     msg: String
   },
+  mounted:function () {
+    this.getClicks();
+  },
   methods:{
     getVICode () {
       const header = {
@@ -68,6 +71,17 @@ export default {
           alert(res.data.body)
         }
        })
+    },
+    getClicks () {
+      const header = {
+        headers:{token: 'haoyujiayou'}
+      }
+      axios.get(`https://www.huyoa.com/api/getClicks`,header).then(res=>{
+        console.log(res)
+        if(res.data.status !== 200){
+          alert(res.data.body)
+        }
+      })
     }
   }
 }
