@@ -42,7 +42,9 @@ export default {
 
       axios.get(`https://www.huyoa.com/api/getVlCode/?phone=${phone}`,header).then(res=>{
         console.log(res)
-        if(res.data.status !== 200){
+        if(res.data.status === 200) {
+          alert('已发送验证码，请等待！')
+        }else if(res.data.status !== 200){
           alert(res.data.body)
         }
       })
