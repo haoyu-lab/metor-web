@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/login_logo1.png" class="imgs">
     <HelloWorld/>
   </div>
 </template>
@@ -18,16 +17,15 @@ export default {
 
 <style>
 #app {
+  background-image:url(./assets/beijing.webp);
+  background-repeat:no-repeat;
+  background-size:100% auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #3b5e80;
   margin-top: 60px;
   min-width: 400px;
 }
-.imgs {
-  width: 400px;
-  margin: 0 auto;
-}
+
 </style>

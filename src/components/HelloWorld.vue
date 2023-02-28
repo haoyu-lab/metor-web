@@ -1,27 +1,20 @@
 <template>
   <div class="hello">
-    <div id="app">
-      <span>手机号：</span><br/>
-      <input  
-        type="text" 
-        v-model="phone" 
-        style="margin-right: 10px;"
-        placeholder="请输入手机号">
-    </div>
+    <h1 >北京地铁预约服务</h1>
     <div id="applogin">
+      <span>手机号:</span><br/>
+      <input type="text" v-model="phone" placeholder="请输入手机号"><br/>
       <span>验证码：</span><br/>
-      <input type="text" v-model="viCode"  placeholder="请输入验证码"/>
+      <input type="text" v-model="viCode"  placeholder="请输入验证码"/><br>
       <button type="submit" :disabled="disabled" @click="getVICode">{{ btntxt }}</button>
-    </div>
-    <div id="register">
-      <button type="submit" 
-              class="denglu"
-              @click="applogin">
-              登录
-      </button>
+      <button type="submit" @click="applogin"> 登录</button>
     </div>
     <div class="tips">
-      <p>提示：目前开放 沙河站、天通苑站、草房站地铁预约进展测试!!!</p>
+      <p>提示：目前开放 
+        <a href="javascript"  style="color: red;text-decoration:none;">沙河站,</a>
+        <a href="javascript"  style="color: red;text-decoration:none;">天通苑站,</a>
+        <a href="javascript"  style="color: red;text-decoration:none;">草房站</a>
+        地铁预约进展测试！！！</p>
     </div>
   </div>
 </template>
@@ -125,27 +118,44 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello {
-  margin: 0 auto;
-  width: 350px;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  background-color: rgb(224, 222, 222);
+  width: 375px;
+  height:375px;
+  border-radius: 50%;
+  margin:0 auto ;
+  margin-top:13%;
+  text-align:center;
+  background-color:rgba(244, 251, 251, 0.5);
 }
-#app {
-  margin: 120px 0 20px 30px;
-  text-align: left;
+.hello h1{
+  text-align: center;
+  color: aliceblue;
+  padding-top: 20px;
 }
-#applogin {
-  text-align: left;
-  margin-bottom: 20px;
-  margin-left: 30px;
+
+
+#applogin span{
+  text-align: center;
+  font-size: 20px;
 }
-.denglu {
-  margin-left: -40px;
-  width: 250px;
-  background-color: rgb(224, 222, 222);
+#applogin input{
+  width:170px;
+  font-size:18px;
+  border-bottom:2px solid #a2a2a2;
+  padding:5px 10px;
+  color:#000000;
+}
+#applogin >button {
+  margin-top:10px;
+  width:190px;
+  height:25px;
+  font-size:18px;
+  font-weight:700;
+  color:#fff;
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  border:0;
+  border-radius:15px;
 }
 .tips {
-  margin-bottom: 100px;
+  margin-top: 5px;
 }
 </style>
