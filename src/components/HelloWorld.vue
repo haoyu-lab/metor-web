@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 >北京地铁预约服务</h1>
+    <h1 >北京地铁自动预约服务</h1>
     <div id="applogin">
       <span>手机号:</span><br/>
       <input type="text" v-model="phone" placeholder="请输入手机号"><br/>
@@ -10,11 +10,11 @@
       <button type="submit" @click="applogin"> 登录</button>
     </div>
     <div class="tips">
-      <p>提示：目前开放 
+      <p>提示：目前开放
         <a href="javascript"  style="color: red;text-decoration:none;">沙河站,</a>
         <a href="javascript"  style="color: red;text-decoration:none;">天通苑站,</a>
         <a href="javascript"  style="color: red;text-decoration:none;">草房站</a>
-        地铁预约进展测试！！！</p>
+          感谢使用！</p>
     </div>
   </div>
 </template>
