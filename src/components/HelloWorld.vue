@@ -16,7 +16,9 @@
         <a href="javascript"  style="color: red;text-decoration:none;">草房站</a>
           感谢使用！</p>
     </div>
+    <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2022028710号-1</a>
   </div>
+
 </template>
 
 <script>
