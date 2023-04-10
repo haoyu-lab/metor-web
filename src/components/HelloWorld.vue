@@ -5,7 +5,7 @@
       <span>手机号:</span><br/>
       <input type="text" v-model="phone" placeholder="请输入手机号"><br/>
       <span>验证码：</span><br/>
-      <input type="text" v-model="viCode"  placeholder="请输入验证码"/><br>
+      <input type="text" v-model="viCode" maxlength="6"  placeholder="请输入验证码"/><br>
       <button type="submit" :disabled="disabled" @click="getVICode">{{ btntxt }}</button>
       <button type="submit" @click="applogin"> 登录</button>
     </div>
